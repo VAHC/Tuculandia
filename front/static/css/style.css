@@ -1,0 +1,128 @@
+*{
+    /*padding: 0;*/
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 1rem;
+    height: 100%;
+}
+
+body, header, main, footer{
+    /*border: 3px red solid;*/
+    min-height: 50px;
+    margin: 0.5rem;
+    min-width: 400px;
+}
+
+body{
+    background-color: #F2F2F2;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+main{
+    min-height: 200px;
+    overflow: auto;
+    background-color: white;
+}
+
+/* Contenido ppal */
+main>div{
+    /*border: 2px blue solid;*/
+    min-height: 180px;
+    margin: 0.5rem;
+    height: auto;
+    float: left;
+    width: 65%;
+}
+
+main>aside{
+    /*border: 2px blue solid;*/
+    min-height: 180px;
+    min-width: 25%;
+    margin: 0.5rem;
+    float: left;
+    width: auto;
+}
+
+header{
+    background: #FFF;
+    box-shadow: 0 0 0.5rem rgb(83, 78, 76 / 50%);
+}
+
+footer{
+    background-color: salmon;
+    color: white;
+    width: 100%;
+
+    text-align: center;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    padding: 50px;
+    height: 50px;
+    margin-top: 0;
+}
+
+.secciones{
+    /*border: 2px green solid;*/
+    min-height: 50px;
+    margin: 0.5rem;
+}
+
+.secciones article{
+    /*border: 2px purple solid;*/
+    margin: 0.5rem;
+    min-height: 20px;
+}
+
+#gif-ppal{
+    width: 70%;
+}
+
+/* logo y menu */
+.header-logo{
+    width: auto;
+    display: inline-block;
+    margin: 0.5rem;
+}
+.header-menubar{
+
+    left: auto;
+    position: relative;
+    top: auto;
+    width: auto;
+    display: inline-block;
+    margin: 0.5rem 0 0.5rem 1rem;
+
+}
+.header-menubar ul{
+    list-style: none;
+}
+
+.header-menubar li{
+    float: left;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0.5rem 0;
+}
+
+.header-menubar a{
+    text-decoration: none;
+    color: black;
+}
+
+.header-menubar a:hover{
+    color: aquamarine;
+}
+
+.header-menubar li a{
+    font-size: 2rem;
+    background: transparent;
+}
+
+
+
+
+
+
