@@ -26,10 +26,96 @@ body{
     min-height: 20vh;
 }
 
-.carousel-inner > .carousel-item > img {
-    object-fit: cover;
-    height: 70vh;
+.title{
+    background-color: #2D343C;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px;
+    color: #F35200;
+    text-decoration: none;
+    animation: moveLeft 10s infinite linear;
+    position: relative;
+}
+
+@keyframes moveLeft {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); } 
+}
+
+.slider-box{
+    width: 1280px;
+    height: 720px;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+
+.slider-box ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-box li{
     width: 100%;
+    list-style: none;
+    position: relative;
+}
+
+.texto{
+    position: absolute;
+    text-align: center;
+    padding: a 250px;
+    top: 250px;
+    color: #FFFFFF;
+}
+
+.texto h2{
+    font-size: 45px;
+    margin-bottom: 35px;
+    text-decoration: none;
+}
+
+.slider-box img{
+    width: 100%;
+}
+
+@keyframes slide{
+    0% {margin-left: 0;}
+    25% {margin-left: 0;}
+    
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+    
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+
+@media(max-width:991px){
+    .slider-box{
+        width: 100%;
+    }
+
+    .texto{
+        top: 50px;
+        padding: 0 25px;
+    }
+
+    .texto h2{
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+
+    .texto p{
+        font-size: 15px;
+    }
 }
 
 .menu{
@@ -311,3 +397,59 @@ footer img:hover {
     }
 }
 
+/* .carrusel{
+    width: 100%;
+}
+
+.conteCarrusel{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.itemCarrusel{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cardCarrusel{
+    width: 100%;
+    height: 100%;
+}
+
+.flechaCarrusel{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+.flechaCarrusel > i:hover{
+    cursor: pointer;
+}
+
+#contePuntos{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#contePuntos > a{
+    font-size: 1.5em;
+    font-style: none;
+    color: black;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+} */
