@@ -18,7 +18,7 @@ body{
 }
 
 .header{
-    background-position: center center;
+    background-position: center;
     background-size: no-repeat;
     background-size: cover;
     display: flex;
@@ -37,7 +37,7 @@ body{
     padding: 10px;
     color: #F35200;
     text-decoration: none;
-    animation: moveLeft 10s infinite linear;
+    animation: moveLeft 20s infinite linear;
     position: relative;
 }
 
@@ -74,10 +74,11 @@ body{
     color: #FFFFFF;
 }
 
-.texto h2{
+.texto > h2{
     font-size: 45px;
     margin-bottom: 35px;
     text-decoration: none;
+    text-align: center;
 }
 
 .slider-box img{
