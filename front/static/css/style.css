@@ -193,7 +193,7 @@ h2{
 .product {
     background-color: #220f0f;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     overflow: hidden;
     width: 400px;
@@ -209,7 +209,7 @@ h2{
 
 .products-1 img{
     width: 250px;
-    border-radius: 25px;
+    border-radius: 15px;
     border: 1px solid #ddd;
 }
 
