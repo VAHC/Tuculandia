@@ -20,6 +20,7 @@ nav a img{
     margin-top: -23px;
 }
 
+/* navbar */
 nav{
     background-color: #FFFFFF;
     height: 130px;
@@ -54,7 +55,7 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color: #F35200;
+    color: #eff300;
 }
 
 a.active, a:hover{
@@ -76,8 +77,27 @@ a.active, a:hover{
     display: none;
 }
 
+.btn-1{
+    background-color: #575757;
+    border-radius: 25px;
+    text-transform: capitalize;
+    margin-right: 10px
+}
+
+.btn-1:hover{
+    background-color: #0552aa;
+}
+
+h2{
+    color: #FFFFFF;
+    font-size: 40px;
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+
+/* Título */
 .title{
-    background-color: #2D343C;
+    background-color: #0552aa;
 }
 
 .titulo{
@@ -85,7 +105,7 @@ a.active, a:hover{
     font-size: 40px;
     font-weight: bold;
     padding: 10px;
-    color: #F35200;
+    color: #eff300;
     text-decoration: none;
     animation: moveLeft 20s infinite linear;
     position: relative;
@@ -96,6 +116,7 @@ a.active, a:hover{
     100% { transform: translateX(-100%); } 
 }
 
+/* Carrusel */
 .slider-box{
     width: 1280px;
     height: 720px;
@@ -114,6 +135,25 @@ a.active, a:hover{
     width: 100%;
     list-style: none;
     position: relative;
+}
+
+.slider-box img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+@keyframes slide{
+    0% {margin-left: 0;}
+    25% {margin-left: 0;}
+    
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+    
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
 }
 
 .texto{
@@ -143,42 +183,7 @@ a.active, a:hover{
     font-weight: bold;
 }
 
-.slider-box img{
-    width: 100%;
-}
-
-@keyframes slide{
-    0% {margin-left: 0;}
-    25% {margin-left: 0;}
-    
-    25% {margin-left: -100%;}
-    45% {margin-left: -100%;}
-    
-    50% {margin-left: -200%;}
-    70% {margin-left: -200%;}
-
-    75% {margin-left: -300%;}
-    100% {margin-left: -300%;}
-}
-
-.btn-1{
-    background-color: #575757;
-    border-radius: 25px;
-    text-transform: capitalize;
-    margin-right: 10px
-}
-
-.btn-1:hover{
-    background-color: #2D343C;
-}
-
-h2{
-    color: #FFFFFF;
-    font-size: 40px;
-    margin-bottom: 35px;
-    font-weight: bold;
-}
-
+/* Productos */
 .products-content{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -200,10 +205,10 @@ h2{
     text-align: center;
 }
 
-.products-1{
+.products-1, .products-2, .products-3, .products-4{
     padding: 70px 0 0 0;
     text-align: center;
-    background-color: #8B4513;
+    background-color: #2D343C;
     border-bottom: 1px solid #0f0f0f;
 }
 
@@ -231,8 +236,6 @@ h2{
 
 /* Empanadillas */
 .products-2{
-    padding: 70px 0 0 0;
-    text-align: center;
     background-color: #BF7F3F;
     border-bottom: 1px solid #0f0f0f;
     
@@ -240,7 +243,7 @@ h2{
 
 .products-2 img{
     width: 250px;
-    border-radius: 25px;
+    border-radius: 15px;
 }
 
 .products-2 h3{
@@ -257,15 +260,13 @@ h2{
 
 /* Tabletas */
 .products-3{
-    padding: 70px 0 0 0;
-    text-align: center;
     background-color: #BFBF3F;
     border-bottom: 1px solid #0f0f0f;
 }
 
 .products-3 img{
     width: 250px;
-    border-radius: 25px;
+    border-radius: 15px;
 }
 
 .products-3 h3{
@@ -282,15 +283,13 @@ h2{
 
 /* Alfeñiques */
 .products-4{
-    padding: 70px 0 0 0;
-    text-align: center;
     background-color: #556B2F;
     border-bottom: 1px solid #0f0f0f;
 }
 
 .products-4 img{
     width: 250px;
-    border-radius: 25px;
+    border-radius: 15px;
 }
 
 .products-4 h3{
@@ -370,7 +369,7 @@ input[type="submit"]:hover {
 .nosotros{
     margin: 0 auto;
     padding: 70px 0;
-    background-color: #636364;
+    background-color: #2D343C;
     text-align: center;
 }
 
@@ -411,7 +410,7 @@ iframe {
 
 
 footer {
-    background-color: #19260C;
+    background-color: #0552aa;
     color: #2D343C;
     position: relative;
     bottom: 0;
