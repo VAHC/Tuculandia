@@ -85,7 +85,7 @@ a.active, a:hover{
 }
 
 .btn-1:hover{
-    background-color: #0552aa;
+    background-color: #335352;
 }
 
 h2{
@@ -97,7 +97,7 @@ h2{
 
 /* Título */
 .title{
-    background-color: #0552aa;
+    background-color: #335352;
 }
 
 .titulo{
@@ -208,7 +208,7 @@ h2{
 .products-1, .products-2, .products-3, .products-4{
     padding: 70px 0 0 0;
     text-align: center;
-    background-color: #2D343C;
+    background-color: #301b28;
     border-bottom: 1px solid #0f0f0f;
 }
 
@@ -236,7 +236,7 @@ h2{
 
 /* Empanadillas */
 .products-2{
-    background-color: #BF7F3F;
+    background-color: #b6452c;
     border-bottom: 1px solid #0f0f0f;
     
 }
@@ -260,7 +260,7 @@ h2{
 
 /* Tabletas */
 .products-3{
-    background-color: brown;
+    background-color: #523634;
     border-bottom: 1px solid #0f0f0f;
 }
 
@@ -283,7 +283,7 @@ h2{
 
 /* Alfeñiques */
 .products-4{
-    background-color: #556B2F;
+    background-color: #ddc5a2;
     border-bottom: 1px solid #0f0f0f;
 }
 
@@ -309,7 +309,7 @@ h2{
 }
 
 main{
-    background-color: #2D343C;
+    background-color: #301b28;
 }
 
 /* Formulario */
@@ -369,7 +369,7 @@ input[type="submit"]:hover {
 .nosotros{
     margin: 0 auto;
     padding: 70px 0;
-    background-color: #2D343C;
+    background-color: #301b28;
     text-align: center;
 }
 
@@ -410,7 +410,7 @@ iframe {
 
 
 footer {
-    background-color: #0552aa;
+    background-color: #2d3033;
     color: #2D343C;
     position: relative;
     bottom: 0;
