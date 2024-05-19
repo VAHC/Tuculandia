@@ -12,18 +12,69 @@ body{
     font-family: "Poppins", sans-serif;
     background-color: #FFFFFF;
 }
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
+
+main {
+    padding-top: 130px;
 }
 
-.header{
-    background-position: center;
-    background-size: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    min-height: 20vh;
+nav a img{
+    margin-top: -23px;
+}
+
+nav{
+    background-color: #FFFFFF;
+    height: 130px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 25px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1000;
+}
+
+nav ul{
+    float: right;
+    margin-right: 5px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: #FFFFFF;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 80px;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color: #F35200;
+}
+
+a.active, a:hover{
+    background: #575757;
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #575757;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
 }
 
 .title{
@@ -71,14 +122,24 @@ body{
     text-align: center;
     padding: a 250px;
     top: 250px;
-    color: #FFFFFF;
+    color: #0f0f0f;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
 }
 
 .texto > h2{
-    font-size: 45px;
+    font-size: 60px;
     margin-bottom: 35px;
     text-decoration: none;
     text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+.texto > p{
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .slider-box img{
@@ -99,62 +160,6 @@ body{
     100% {margin-left: -300%;}
 }
 
-@media(max-width:991px){
-    .slider-box{
-        width: 100%;
-    }
-
-    .texto{
-        top: 50px;
-        padding: 0 25px;
-    }
-
-    .texto h2{
-        font-size: 35px;
-        margin-bottom: 15px;
-    }
-
-    .texto p{
-        font-size: 15px;
-    }
-}
-
-.menu{
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-decoration: none;
-}
-
-.menu .navbar ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.menu .navbar ul li {
-    margin-right: 20px;
-}
-
-.menu .navbar ul li a{
-    font-size: 18px;
-    padding: 20px;
-    color: #FFFFFF;
-    display: block;
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.3s ease;
-} 
-
-.menu .navbar ul li a:hover{
-    color: #F35200;
-}
-
 .btn-1{
     background-color: #575757;
     border-radius: 25px;
@@ -166,17 +171,18 @@ body{
     background-color: #2D343C;
 }
 
-.products{
+.products-1{
     padding: 70px 0 0 0;
     text-align: center;
-    background-color: #2D343C;
+    background-color: #51565c;
 }
 
 h2{
-    color: #FFFFFF;
+    color: black;
     font-size: 40px;
     margin-bottom: 35px;
     text-decoration: underline;
+    font-weight: bold;
 }
 
 .products-content{
@@ -185,18 +191,94 @@ h2{
     grid-gap:35px;
 }
 
-.products img{
+.products-1 img{
     width: 250px;
     border-radius: 25px;
 }
 
-.products h3{
+.product:hover img {
+    transform: scale(0.8);
+}
+
+.products-1 h3{
     font-size: 20px;
     color: #FFFFFF;
     margin-bottom: 10px;
 }
 
-.products p{
+.products-1 p{
+    font-size: 16px;
+    color: #ECEBEB;
+    margin-bottom: 10px;
+}
+
+/* Empanadillas */
+.products-2{
+    padding: 70px 0 0 0;
+    text-align: center;
+    background-color: #596470;
+}
+
+.products-2 img{
+    width: 250px;
+    border-radius: 25px;
+}
+
+.products-2 h3{
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.products-2 p{
+    font-size: 16px;
+    color: #ECEBEB;
+    margin-bottom: 10px;
+}
+
+/* Tabletas */
+.products-3{
+    padding: 70px 0 0 0;
+    text-align: center;
+    background-color: #6b8097;
+}
+
+.products-3 img{
+    width: 250px;
+    border-radius: 25px;
+}
+
+.products-3 h3{
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.products-3 p{
+    font-size: 16px;
+    color: #ECEBEB;
+    margin-bottom: 10px;
+}
+
+/* Alfeñiques */
+.products-4{
+    padding: 70px 0 0 0;
+    text-align: center;
+    background-color: #646669;
+}
+
+.products-4 img{
+    width: 250px;
+    border-radius: 25px;
+}
+
+.products-4 h3{
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.products-4 p{
     font-size: 16px;
     color: #ECEBEB;
     margin-bottom: 10px;
@@ -209,6 +291,8 @@ h2{
 main{
     background-color: #2D343C;
 }
+
+/* Formulario */
 
 .contact{
     max-width: 600px;
@@ -255,10 +339,17 @@ input[type="submit"]:hover {
     background-color: #F35200;
 }
 
+.error{
+    color: red;
+    font-weight: bold;
+    font-size: 14px;
+    
+  }
+
 .nosotros{
     margin: 0 auto;
     padding: 70px 0;
-    background-color: #2D343C;
+    background-color: #636364;
     text-align: center;
 }
 
@@ -272,7 +363,6 @@ input[type="submit"]:hover {
 
 .nosotro{
     background-color: #FFFFFF;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
     padding: 35px;
     text-align: left;
 }
@@ -300,7 +390,7 @@ iframe {
 
 
 footer {
-    background-color: #2D343C;
+    background-color: #02023a;
     color: #2D343C;
     position: relative;
     bottom: 0;
@@ -309,11 +399,15 @@ footer {
     text-align: center;
 }
 
+footer a{
+    text-decoration: none;
+    box-shadow: none;
+}
+
 footer img {
     width: 30px;
     margin: 10px;
     margin-top: 20px;
-    margin-bottom: 17px;
     transition: transform 0.5s ease;
 }
 
@@ -344,41 +438,66 @@ footer img:hover {
     color: #F35200;
 }
 
-@media(max-width:991px){
-    .menu{
-        padding: 20px;
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
     }
-    .menu label{
-        display: initial;
-    }
-    .menu .navbar{
-        position: absolute;
-        top: 100px;
-        left: 0;
-        right: 0;
-        background-color: #2D343C;
-        display: none;
-    }
-    .menu .navbar ul li{
+    ul{
+        position: fixed;
         width: 100%;
+        height: 100vh;
+        background: #575757;
+        top: 130px;
+        left: -100%;
         text-align: center;
+        transition: all .5s;
     }
-    #menu:checked ~ .navbar{
-        display: initial;
+    nav{
+        position: fixed;
     }
-    .logo{
-        display: none;
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
     }
-    
-    .header{
-        min-width: 0vh;
+    nav ul li a{
+        font-size: 20px;
     }
-    .header-content{
-        padding: 100px 30px;
+    a:hover,a.active{
+        background: none;
+        color: #F35200;
     }
-    .header-txt{
-        padding: 0;
+    #check:checked ~ ul{
+        left: 0;
     }
+}
+
+@media(max-width:991px){
+    a{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    .slider-box{
+        width: 100%;
+    }
+
+    .texto{
+        top: 50px;
+        padding: 0 25px;
+    }
+
+    .texto h2{
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+
+    .texto p{
+        font-size: 15px;
+    }
+
     .products{
         padding: 30px;
     }
@@ -397,60 +516,3 @@ footer img:hover {
         text-align: center;
     }
 }
-
-/* .carrusel{
-    width: 100%;
-}
-
-.conteCarrusel{
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-}
-
-.itemCarrusel{
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.cardCarrusel{
-    width: 100%;
-    height: 100%;
-}
-
-.flechaCarrusel{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-
-.flechaCarrusel > i:hover{
-    cursor: pointer;
-}
-
-#contePuntos{
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-#contePuntos > a{
-    font-size: 1.5em;
-    font-style: none;
-    color: black;
-}
-
-img{
-    width: 100%;
-    height: 100%;
-} */

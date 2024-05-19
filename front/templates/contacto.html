@@ -8,43 +8,50 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a0166bc72d.js" crossorigin="anonymous"></script>
     <title>Tuculandia</title>
     <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../validacion.js"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="menu container">
-            <a href="../index.html"><img src="../static/img/4.png" alt="Logo"></a>
-           
-            <nav class="navbar">
-                <ul>              
-                    <li><a href="../index.html" class="btn-1">Inicio</a></li>
-                    <li><a href="./productos.html" class="btn-1">Productos</a></li>
-                    <li><a href="./contacto.html" class="btn-1">Contacto</a></li>
-                    <li><a href="./nosotros.html" class="btn-1">Nosotros</a></li>
-                </ul>
-            </nav>
-    </div>  
-    </header>
+
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <a href="../index.html"><img src="../static/img/4.png" alt="Logo"></a>
+    <ul>              
+        <li><a href="../index.html" class="btn-1">Inicio</a></li>
+        <li><a href="./productos.html" class="btn-1">Productos</a></li>
+        <li><a href="./contacto.html" class="btn-1">Contacto</a></li>
+        <li><a href="./nosotros.html" class="btn-1">Nosotros</a></li>
+    </ul>
+  </nav>
+
 <main>
     <!-- Formulario -->
 
     <section class="contact">
         <h2>Contacto</h2>
     
-        <form action="#" id="formContact" method="POST">
+        <form action="#" id="formulario" method="POST">
          
           <label for="firstname">Nombre</label>
-          <input type="text" name="firstname" id="firstname" required>
+          <input type="text" name="firstname" id="firstname">
+          <p id="error-nombre" class="error"></p>
          
           <label for="lastname">Apellido</label>
-          <input type="text" name="lastname" id="lastname" required >
+          <input type="text" name="lastname" id="lastname">
+          <p id="error-apellido" class="error"></p>
          
           <label for="email">Email</label>
-          <input type="email" name="email" id="email" required>
+          <input type="email" name="email" id="email">
+          <p id="error-email" class="error"></p>
           
           <label for="telefono">Teléfono</label>
-          <input type="text" name="telefono" id="telefono" required>
+          <input type="text" name="telefono" id="telefono">
+          <p id="error-telefono" class="error"></p>
           
           <label for="interes">Sección de interés</label>
           <select name="interes" id="interes">
@@ -52,6 +59,7 @@
             <option value="soporte">Soporte</option>
             <option value="consultas">Consultas Generales</option>
           </select>
+          <p id="error-interes" class="error"></p>
           
           <label for="comentario">Comentario:</label>
           <textarea name="comentario" id="comentario" rows="4"></textarea>
@@ -62,51 +70,42 @@
           <br>
 
           <label for="acepto">
-            <input type="checkbox" id="acepto" name="acepto" required>
+            <input type="checkbox" id="acepto" name="acepto">
             Acepto los Términos y Condiciones
           </label>
+          <p id="error-acepto" class="error"></p>
           <br>
 
           <div style="text-align: center;">
             <input type="submit" value="Enviar">
           </div>
+          <br>
+          <p id="error-general" class="error"></p>
           
       </form>
        </section>
 </main>
  
-<!-- Validación -->
-<script>
-     document.querySelector('form').addEventListener('submit', function (event) {
-            const nombre = document.getElementById('nombre').value;
-            const email = document.getElementById('email').value;
-            const acepto = document.getElementById('acepto').checked;
+<footer>
+  <div>
+    <a href="https://www.facebook.com" target="_blank">
+      <img src="../static/img/facebook.svg" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com" target="_blank">
+      <img src="../static/img/youtube.svg" alt="Instagram">
+    </a>
+    <a href="https://www.youtube.com" target="_blank">
+      <img src="../static/img/youtube.svg" alt="Youtube">
+    </a>
+    <a target="_blank" href="https://goo.gl/maps/WptMKA4um2Ut27NH6">
+      <img src="../static/img/maps.svg" alt="Ubicación">
+    </a>
+  </div>
+  <div>
+    <p>Todos los derechos reservados &copy; 2024 - Victor Alfonso Hardoy</p>
+  </div>
+</footer>
 
-            if (!nombre || !email || !acepto) {
-                event.preventDefault();
-                alert('Por favor, completa todos los campos obligatorios.');
-            }
-        });
-</script>
-
-    <footer class="row mt-4">
-        <div class="text-center">
-          <a class="text-decoration-none" href="https://www.facebook.com" target="_blank">
-            <img src="../static/img/facebook.svg" alt="Facebook">
-          </a>
-          <a class="text-decoration-none" href="https://www.instagram.com" target="_blank">
-            <img src="../static/img/instagram.svg" alt="Instagram">
-          </a>
-          <a class="text-decoration-none" href="https://www.youtube.com" target="_blank">
-            <img src="../static/img/youtube.svg" alt="Youtube">
-          </a>
-          <a class="text-white text-underline-hover" target="_blank" href="https://goo.gl/maps/WptMKA4um2Ut27NH6">
-            <img src="../static/img/maps.svg" alt="Ubicación">
-          </a>
-        </div>
-        <div class="text-center py-1">
-          <p class="m-0">Todos los derechos reservados &copy; 2024 - Victor Alfonso Hardoy</p>
-        </div>
-      </footer>
+      
 </body>
 </html>
