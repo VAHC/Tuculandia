@@ -480,13 +480,14 @@ footer img:hover {
     nav ul li a{
         font-size: 20px;
     }
-    a{
-        font-size: 30px;
-        padding-left: 50px;
+    a:hover,a.active{
+        background: none;
+        color: #F35200;
     }
-    nav ul li a{
-        font-size: 16px;
+    #check:checked ~ ul{
+        left: 0;
     }
+
     .slider-box{
         width: 100%;
     }
