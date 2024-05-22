@@ -159,10 +159,8 @@ h2{
 .texto{
     position: absolute;
     text-align: center;
-    padding: a 250px;
-    top: 250px;
-    color: #0f0f0f;
-    top: 50%;
+    padding: -1 250px;
+    top: 550px;
     left: 50%;
     transform: translate(-50%, -50%);  
     background-color: rgba(240, 240, 240, 0.253);
@@ -175,12 +173,12 @@ h2{
     text-decoration: none;
     text-align: center;
     font-weight: bold;
-    color: #0f0f0f;
 }
 
 .texto > p{
     font-size: 25px;
     font-weight: bold;
+    color: #FFFFFF;
 }
 
 /* Productos */
@@ -196,112 +194,59 @@ h2{
 }
 
 .product {
-    background-color: #220f0f;
-    border: 1px solid #ddd;
+    background-color: #FAE7C9;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     overflow: hidden;
-    width: 400px;
+    width: 100%;
     text-align: center;
 }
 
 .products-1, .products-2, .products-3, .products-4{
     padding: 70px 0 0 0;
     text-align: center;
-    background-color: #301b28;
-    border-bottom: 1px solid #0f0f0f;
+    background-color: #637E76;
 }
 
-.products-1 img{
+.products-1 img, .products-2 img, .products-3 img, .products-4 img{
     width: 250px;
     border-radius: 15px;
-    border: 1px solid #ddd;
+    border: 2px solid #0f0f0f;
 }
 
 .product:hover img {
     transform: scale(0.8);
 }
 
-.products-1 h3{
+.products-1 h3, .products-2 h3, .products-3 h3, .products-4 h4{
     font-size: 20px;
-    color: #FFFFFF;
+    color: #0f0f0f;
     margin-bottom: 10px;
 }
 
-.products-1 p{
+.products-1, .products-2 p, .products-3 p, .products-4 p{
     font-size: 16px;
-    color: #ECEBEB;
+    color: #0f0f0f;
     margin-bottom: 10px;
 }
 
 /* Empanadillas */
 .products-2{
-    background-color: #b6452c;
+    background-color: #B3A492;
     border-bottom: 1px solid #0f0f0f;
     
 }
 
-.products-2 img{
-    width: 250px;
-    border-radius: 15px;
-}
-
-.products-2 h3{
-    font-size: 20px;
-    color: #FFFFFF;
-    margin-bottom: 10px;
-}
-
-.products-2 p{
-    font-size: 16px;
-    color: #ECEBEB;
-    margin-bottom: 10px;
-}
-
 /* Tabletas */
 .products-3{
-    background-color: #523634;
+    background-color: #B0926A;
     border-bottom: 1px solid #0f0f0f;
-}
-
-.products-3 img{
-    width: 250px;
-    border-radius: 15px;
-}
-
-.products-3 h3{
-    font-size: 20px;
-    color: #FFFFFF;
-    margin-bottom: 10px;
-}
-
-.products-3 p{
-    font-size: 16px;
-    color: #ECEBEB;
-    margin-bottom: 10px;
 }
 
 /* Alfeñiques */
 .products-4{
-    background-color: #ddc5a2;
+    background-color: #E1C78F;
     border-bottom: 1px solid #0f0f0f;
-}
-
-.products-4 img{
-    width: 250px;
-    border-radius: 15px;
-}
-
-.products-4 h3{
-    font-size: 20px;
-    color: #FFFFFF;
-    margin-bottom: 10px;
-}
-
-.products-4 p{
-    font-size: 16px;
-    color: #ECEBEB;
-    margin-bottom: 10px;
 }
 
 .precio{
@@ -309,7 +254,7 @@ h2{
 }
 
 main{
-    background-color: #301b28;
+    background-color: #637E76
 }
 
 /* Formulario */
@@ -366,10 +311,12 @@ input[type="submit"]:hover {
     
   }
 
+/* Nosotros */
+
 .nosotros{
     margin: 0 auto;
     padding: 70px 0;
-    background-color: #301b28;
+    background-color: #637E76;
     text-align: center;
 }
 
@@ -382,13 +329,14 @@ input[type="submit"]:hover {
 }
 
 .nosotro{
-    background-color: #FFFFFF;
+    background-color: #ECEBEB;
     padding: 35px;
     text-align: left;
+    border-radius: 10px;
 }
 
 .nosotro h3{
-    font-size: 20px;
+    font-size: 30px;
     color: #2D343C;
     margin-bottom: 10px;
 }
@@ -399,7 +347,7 @@ hr{
 }
 
 .nosotro p{
-    font-size: 16px;
+    font-size: 20px;
     color: #575757;
     margin-top: 15px;
 }
@@ -408,6 +356,7 @@ iframe {
     border: none;
 }
 
+/* Footer */
 
 footer {
     background-color: #2d3033;
@@ -428,7 +377,6 @@ footer img {
     width: 30px;
     margin: 10px;
     margin-top: 20px;
-    transition: transform 0.5s ease;
 }
 
 footer p{
@@ -458,7 +406,126 @@ footer img:hover {
     color: #F35200;
 }
 
-@media (max-width: 858px){
+/* Dispositivos grandes (escritorios) */
+@media screen and (min-width: 1290px) {
+    .products-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Dispositivos medianos (tabletas) */
+@media screen and (min-width: 768px) and (max-width: 1285px){
+    .products-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #575757;
+        top: 130px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav{
+        position: fixed;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #F35200;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+} 
+
+/* Dispositivos pequeños (teléfonos móviles) */
+@media screen and (max-width: 767px) {
+    .products-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #575757;
+        top: 130px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav{
+        position: fixed;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    .slider-box{
+        width: 100%;
+    }
+
+    .texto{
+        top: 50px;
+        padding: 0 25px;
+    }
+
+    .texto h2{
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+
+    .texto p{
+        font-size: 15px;
+    }
+
+    .products{
+        padding: 30px;
+    }
+    .products-content{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 50px;
+    }
+    .nosotros{
+        padding: 30px;
+        margin: 0;
+    }
+    .nosotros-content{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .footer{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* @media (max-width: 1285px){
     .checkbtn{
         display: block;
     }
@@ -536,4 +603,4 @@ footer img:hover {
         flex-direction: column;
         text-align: center;
     }
-}
+} */
