@@ -34,12 +34,16 @@ nav{
 }
 
 nav ul{
+    /* float: right;
+    margin-right: 5px; */
+    list-style: none;
+    display: flex;
+    gap: 1px;
     float: right;
-    margin-right: 5px;
 }
 
 nav ul li{
-    display: inline-block;
+    display: inline;
     line-height: 80px;
     margin: 0 5px;
 }
@@ -49,7 +53,7 @@ nav ul li a{
     font-size: 18px;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 10px 80px;
+    padding: 10px 60px;
     transition: color 0.3s ease;
     font-weight: bold;
 }
@@ -62,6 +66,17 @@ a.active, a:hover{
     background: #575757;
     transition: .5s;
 }
+
+/* .user-actions a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.user-actions .cart {
+    font-size: 24px;
+} */
 
 .checkbtn{
     font-size: 30px;
@@ -95,90 +110,75 @@ h2{
     font-weight: bold;
 }
 
-/* Título */
-.title{
-    background-color: #335352;
-}
-
-.titulo{
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
-    padding: 10px;
-    color: #eff300;
-    text-decoration: none;
-    animation: moveLeft 20s infinite linear;
+.main {
     position: relative;
-}
-
-@keyframes moveLeft {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); } 
-}
-
-/* Carrusel */
-.slider-box{
-    width: 1280px;
-    height: 720px;
-    margin: 50px auto 0;
+    width: 100%;
+    height: 100vh;
     overflow: hidden;
 }
 
-.slider-box ul{
-    display: flex;
-    padding: 0;
-    width: 400%;
-    animation: slide 20s infinite alternate ease-in-out;
-}
-
-.slider-box li{
-    width: 100%;
-    list-style: none;
+.card {
     position: relative;
-}
-
-.slider-box img{
     width: 100%;
-    border-radius: 10px;
+    height: 100%;
 }
 
-@keyframes slide{
-    0% {margin-left: 0;}
-    25% {margin-left: 0;}
-    
-    25% {margin-left: -100%;}
-    45% {margin-left: -100%;}
-    
-    50% {margin-left: -200%;}
-    70% {margin-left: -200%;}
-
-    75% {margin-left: -300%;}
-    100% {margin-left: -300%;}
-}
-
-.texto{
+.background-img {
     position: absolute;
-    text-align: center;
-    padding: -1 250px;
-    top: 550px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    animation: rotateImage 30s infinite linear;
+}
+
+@keyframes rotateImage {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.text-overlay {
+    position: absolute;
+    top: 80%;
     left: 50%;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    z-index: 2;
     transform: translate(-50%, -50%);  
     background-color: rgba(240, 240, 240, 0.253);
     box-shadow: 0px 0px 10px rgb(0,0,0,0.5);
-} 
-
-.texto > h2{
-    font-size: 60px;
-    margin-bottom: 35px;
-    text-decoration: none;
-    text-align: center;
-    font-weight: bold;
+    border-radius: 5%;
 }
 
-.texto > p{
-    font-size: 25px;
+.text-overlay h2 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.text-overlay p {
+    font-size: 1.2em;
+}
+
+.catalogo {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
     font-weight: bold;
-    color: #FFFFFF;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.catalogo:hover {
+    background-color: #2d3033;
+    color: #2d3033;
 }
 
 /* Productos */
@@ -264,7 +264,7 @@ main{
     margin: 0 auto;
     padding: 20px;
     background-color: #f8f8f8;
-    border-radius: 10px;;
+    border-radius: 10px;
 }
 
 .contact>h2{
@@ -406,6 +406,55 @@ footer img:hover {
     color: #F35200;
 }
 
+/* Preguntas frecuentes */
+
+.faq {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+}
+
+.faq .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2D343C;
+}
+
+.faq-item {
+    margin-bottom: 30px;
+}
+
+.faq-item h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.faq-item p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.faq-item a {
+    color: #F35200;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.faq-item a:hover {
+    text-decoration: underline;
+    color: #eff300;
+}
+
 /* Dispositivos grandes (escritorios) */
 @media screen and (min-width: 1290px) {
     .products-content {
@@ -424,12 +473,16 @@ footer img:hover {
     ul{
         position: fixed;
         width: 40%;
-        height: 40vh;
+        height: 70vh;
         background: #575757;
         top: 130px;
         left: -100%;
         text-align: center;
         transition: all .5s;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5%;
+        justify-content: center;
     }
     nav{
         position: fixed;
@@ -461,13 +514,17 @@ footer img:hover {
     }
     ul{
         position: fixed;
-        width: 100%;
-        height: 40vh;
+        width: 40%;
+        height: 70vh;
         background: #575757;
         top: 130px;
         left: -100%;
         text-align: center;
         transition: all .5s;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5%;
+        justify-content: center;
     }
     nav{
         position: fixed;
