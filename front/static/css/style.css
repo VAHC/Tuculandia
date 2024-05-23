@@ -523,8 +523,8 @@ footer img:hover {
     }
     ul{
         position: fixed;
-        width: 50%;
-        height: 70vh;
+        width: 60%;
+        height: 60vh;
         background: #575757;
         top: 130px;
         left: -100%;
