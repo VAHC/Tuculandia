@@ -495,11 +495,16 @@ footer img:hover {
     }
     nav{
         position: fixed;
+        width: 100%; 
+        margin-top: 0;
     }
     nav ul li{
         display: block;
         margin: 50px 0;
         line-height: 30px;
+        margin-left: 0;
+        width: 100%; 
+        margin-top: 0;
     }
     nav ul li a{
         font-size: 20px;
@@ -537,8 +542,9 @@ footer img:hover {
     }
     nav{
         position: fixed;
-        padding: 10px;
+        /* padding: 5px 10px; */
         width: 100%; 
+        margin-top: 0;
     }
     nav ul{
         padding-left: 0;
@@ -547,6 +553,9 @@ footer img:hover {
         display: block;
         margin: 50px 0;
         line-height: 30px;
+        margin-left: 0;
+        width: 100%; 
+        margin-top: 0;
     }
     nav ul li a{
         font-size: 15px;
