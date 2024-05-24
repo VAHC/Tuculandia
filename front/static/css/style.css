@@ -675,6 +675,13 @@ footer img:hover {
         padding: 0 50px;
     }
 
+    .nosotros{
+        margin: 0 auto;
+        padding: 40px 0;
+        background-color: #637E76;
+        text-align: center;
+    }
+
     .nosotros-content{
         grid-template-columns: repeat(1,1fr);
         padding: 0px;
