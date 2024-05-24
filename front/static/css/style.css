@@ -404,7 +404,7 @@ footer img:hover {
     color: #F35200;
 }
 
-/* Preguntas frecuentes */
+/* Preguntas y respuestas */
 
 .faq {
     max-width: 900px;
@@ -449,7 +449,6 @@ footer img:hover {
 }
 
 .faq-item a:hover {
-    text-decoration: underline;
     color: #eff300;
 }
 
@@ -546,6 +545,37 @@ footer img:hover {
     .text-overlay p {
         font-size: 1.2em;
         color: #FFFFFF;
+    }
+    .nosotro{
+        background-color: #ECEBEB;
+        padding: 20px;
+        text-align: left;
+        border-radius: 10px;
+    }
+    
+    .nosotro h3{
+        font-size: 20px;
+        color: #2D343C;
+        margin-bottom: 10px;
+    }
+    
+    hr{
+        width: 50px;
+        border: 2px solid #F35200;
+        margin-bottom: 10px;
+    }
+    
+    .nosotro p{
+        font-size: 20px;
+        color: #575757;
+        margin-top: 10px;
+    }
+    .nosotros-content{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .footer{
+        flex-direction: column;
+        text-align: center;
     }
 } 
 
@@ -644,9 +674,30 @@ footer img:hover {
         grid-template-columns: repeat(1, 1fr);
         padding: 0 50px;
     }
-    .nosotros{
-        padding: 30px;
-        margin: 0;
+    .nosotro{
+        background-color: #ECEBEB;
+        padding: 20px;
+        text-align: left;
+        border-radius: 10px;
+    }
+    
+    .nosotro h3{
+        font-size: 20px;
+        color: #2D343C;
+        margin-bottom: 10px;
+    }
+    
+    hr{
+        width: 50px;
+        border: 2px solid #F35200;
+        margin-bottom: 10px;
+    }
+    
+    .nosotro p{
+        font-size: 15px;
+        color: #575757;
+        margin-top: 10px;
+        word-wrap: break-word;
     }
     .nosotros-content{
         grid-template-columns: repeat(1,1fr);
