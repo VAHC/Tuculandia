@@ -723,9 +723,14 @@ footer img:hover {
     .faq-item p{
         color: #FFFFFF;
     }
-    /* .faq-item{
-        background-color: #FFFFFF;
-    } */
+    .contact{
+        background-color: #637E76;
+        color: #FFFFFF;
+    }
+    .contact h2{
+        color: #FFFFFF;
+        text-decoration: underline;
+    }
     
     .footer{
         flex-direction: column;
