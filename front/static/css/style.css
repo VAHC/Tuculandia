@@ -674,11 +674,16 @@ footer img:hover {
         grid-template-columns: repeat(1, 1fr);
         padding: 0 50px;
     }
+
+    .nosotros-content{
+        grid-template-columns: repeat(1,1fr);
+        padding: 0px;
+    }
     .nosotro{
         background-color: #ECEBEB;
         padding: 20px;
-        text-align: left;
         border-radius: 10px;
+        overflow: hidden;
     }
     
     .nosotro h3{
@@ -697,11 +702,9 @@ footer img:hover {
         font-size: 15px;
         color: #575757;
         margin-top: 10px;
-        word-wrap: break-word;
+        text-align: justify;
     }
-    .nosotros-content{
-        grid-template-columns: repeat(1,1fr);
-    }
+    
     .footer{
         flex-direction: column;
         text-align: center;
