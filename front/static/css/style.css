@@ -414,10 +414,6 @@ footer img:hover {
     border-radius: 10px;
 }
 
-.faq .container {
-    max-width: 800px;
-    margin: 0 auto;
-}
 
 .faq h1 {
     font-size: 36px;
@@ -440,6 +436,7 @@ footer img:hover {
     font-size: 18px;
     color: #555;
     line-height: 1.6;
+    text-align: justify;
 }
 
 .faq-item a {
@@ -711,6 +708,24 @@ footer img:hover {
         margin-top: 10px;
         text-align: justify;
     }
+    .faq {
+        background-color: #637E76;
+    }
+    .faq h1{
+        color: #FFFFFF;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    .faq-item h2{
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+    .faq-item p{
+        color: #FFFFFF;
+    }
+    /* .faq-item{
+        background-color: #FFFFFF;
+    } */
     
     .footer{
         flex-direction: column;
